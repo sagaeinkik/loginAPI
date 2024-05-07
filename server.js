@@ -8,10 +8,12 @@ const cookieParser = require('cookie-parser');
 require('dotenv').config();
 const authRoutes = require('./routes/authRoutes');
 const jwt = require('jsonwebtoken');
+const cors = require('cors');
 
 //parsing
 app.use(express.json());
 app.use(cookieParser());
+app.use(cors());
 
 //port
 const port = process.env.PORT || 3000;
