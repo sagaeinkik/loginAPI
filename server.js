@@ -35,7 +35,7 @@ app.use(authRoutes);
 app.get('/', (req, res) => {
     res.json({
         message:
-            'Välkommen till mitt API för Moment 4 i Backendbaserad webbutveckling på Mittuniversitetet. Instruktioner för användning hittar du på githubrepot (länka här)',
+            'Välkommen till mitt API för Moment 4 i Backendbaserad webbutveckling på Mittuniversitetet. Instruktioner för användning hittar du på githubrepot https://github.com/sagaeinkik/loginAPI',
     });
 });
 
