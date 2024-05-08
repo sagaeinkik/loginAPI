@@ -38,3 +38,7 @@ Your_secret_key kan genereras med hjälp av filen `generateSecret.js` i vilken c
 | POST   |  /signup    | Registrerar ny användare enligt Schema   |
 |  POST  |  /login     |  Genererar web token och lagrar i cookie |
 |  GET   |  /protected |  Skyddad route som kräver giltig JWT     |
+
+## Test
+
+Testa applikationen på https://loginapi-saz1.onrender.com.
