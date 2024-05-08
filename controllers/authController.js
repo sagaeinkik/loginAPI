@@ -46,6 +46,12 @@ module.exports.registerUser = async (req, res) => {
         });
     } catch (error) {
         console.log('Något gick fel vid post signup: ' + error);
+
+        // Hantera valideringsfel och returnera individuella felmeddelanden
+        if (error.name === 'ValidationError') {
+            const errors = Object.values(error.errors).map((err) => err.message);
+            return res.status(400).json({ errors });
+        }
         return res.status(400).json({ error });
     }
 };
