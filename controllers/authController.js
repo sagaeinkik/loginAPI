@@ -39,8 +39,6 @@ module.exports.registerUser = async (req, res) => {
         const user = await User.create({ username, email, password });
         //skapa en token för inloggning direkt
         const token = createToken(user.username);
-        //Lagra i cookie (*1000 för den har med milisekunder också)
-        res.cookie('jwt', token, { maxAge: expirationDate * 1000 });
         res.status(200).json({ message: 'User created', user: user, token });
     } catch (error) {
         console.log('Något gick fel vid post signup: ' + error);
@@ -67,7 +65,6 @@ module.exports.login = async (req, res) => {
         const user = await User.login(username, password);
         //Skapa token
         const token = createToken(user.username);
-        res.cookie('jwt', token, { maxAge: expirationDate * 1000 });
         res.status(200).json({ message: 'User logged in', user: user, token });
     } catch (error) {
         console.log('Något gick fel vid post loginUser: ' + error);

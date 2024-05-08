@@ -12,7 +12,6 @@ API:et är skapat med MongoDB som DBMS.
 
 -   Express
 -   Mongoose - för att strukturera data
--   Cookie-parser - lagrar JWT-tokens i cookies
 -   jsonwebtoken - genererar tokens
 -   dotenv - för lagring av känsliga miljövariabler
 -   bcrypt - hasha lösenord innan lagring i databasen
