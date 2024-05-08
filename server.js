@@ -39,7 +39,7 @@ app.get('/', (req, res) => {
 
 //skyddad route
 app.get('/protected', authenticateToken, (req, res) => {
-    res.json({ message: 'Access granted' });
+    res.json({ message: 'Access granted', username: req.username });
 });
 
 //Tokenvalidering
